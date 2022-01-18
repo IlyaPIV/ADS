@@ -23,7 +23,7 @@ public class Main {
         Random rnd = new Random();
         Notebook[] ourNotebooks = new Notebook[size];
         for (int i = 0; i < size; i++) {
-            int price = 450 + 50 * (rnd.nextInt(3)+1);
+            int price = 500 + 50 * (rnd.nextInt(30));
             int ram = 4 * ((rnd.nextInt(4)+1));
             String manufacturer = rndManufacturer(rnd.nextInt(4));
             ourNotebooks[i] = new Notebook(price, ram, manufacturer);
