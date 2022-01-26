@@ -58,7 +58,7 @@ public class myTest {
         myTSLL.display();
 
         //удаление конкретного элемента
-        System.out.println("Removing 1: ");
+        System.out.println("Removing 1: "+myTSLL.remove(1));
         myTSLL.display();
         System.out.println("Removing first: "+myTSLL.removeFirst());
         myTSLL.display();
@@ -94,5 +94,29 @@ public class myTest {
         System.out.println("Removing last item: "+myLDq.removeLast());
 
         System.out.println(myLDq.toString());
+
+        System.out.println();
+        System.out.println("===== TEST myIterator ======");
+        myListIterator<Integer> myIterator = new myListIterator<>(mySLL);
+        mySLL.display();
+        System.out.println("Insert 4 after current:");
+        myIterator.insertAfter(4);
+        mySLL.display();
+        myIterator.next();
+        myIterator.next();
+        myIterator.next();
+        //System.out.println("Current position of iterator is: "+myIterator.getCurrent());
+        System.out.println(myIterator.showPosition());
+        System.out.println("Insert 5 before current:");
+        myIterator.insertBefore(5);
+        mySLL.display();
+        System.out.println(myIterator.showPosition());
+        myIterator.next();
+        System.out.println("Удаляем текущий: ");
+        myIterator.deleteCurrent();
+        mySLL.display();
+
+
+
     }
 }

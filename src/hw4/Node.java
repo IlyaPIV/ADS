@@ -17,4 +17,8 @@ public class Node<E>{
             this.previous = previous;
         }
 
+    @Override
+    public String toString() {
+        return item.toString();
+    }
 }

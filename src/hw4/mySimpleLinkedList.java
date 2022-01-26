@@ -1,9 +1,5 @@
 package hw4;
 
-import java.util.Iterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
-
 public class mySimpleLinkedList<E> implements myLinkedListInterface<E> {
 
     protected int size;
@@ -104,25 +100,17 @@ public class mySimpleLinkedList<E> implements myLinkedListInterface<E> {
         return sb.toString();
     }
 
-
-
-
-    private class myListIterator{
-
-        private Node<E> current;
-
-        public myListIterator(Node<E> current){
-            this.current = current;
-        }
-
-
-        public boolean hasNext() {
-            return current.next!=null;
-        }
-
-
-        public Node<E> next() {
-            return current.next;
-        }
+    public void setFirstLink(Node<E> value){
+        this.first = value;
     }
+
+    public Node<E> getFirstLink(){
+        return first;
+    }
+
+    public myListIterator<E> getIterator(){
+        return new myListIterator(this);
+    }
+
+
 }
