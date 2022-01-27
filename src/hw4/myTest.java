@@ -3,9 +3,31 @@ package hw4;
 
 public class myTest {
     public static void main(String[] args) {
-        System.out.println("===== TEST mySimpleLinkedList ======");
-        mySimpleLinkedList<Integer> mySLL = new mySimpleLinkedList<>();
 
+        mySimpleLinkedList<Integer> mySLL = new mySimpleLinkedList<>();
+        testSimpleLinkedList(mySLL);
+
+        myLinkedListStack<Integer> myLLS = new myLinkedListStack<>();
+        testLinkedListStack(myLLS);
+
+        myTwoSidedLinkedList<Integer> myTSLL = new myTwoSidedLinkedList<>();
+        testTwoSidedLinkedList(myTSLL);
+
+        myLinkedQueue<Integer> myLQ = new myLinkedQueue<>();
+        testLinkedQueue(myLQ);
+
+
+        //ДОМАШНЕЕ ЗАДАНИЕ
+        myLinkedDeque<Integer> myLDq = new myLinkedDeque<>();
+        testLinkedDeque(myLDq);
+
+        testIterator(mySLL);
+
+    }
+
+    public static void testSimpleLinkedList(mySimpleLinkedList<Integer> mySLL)
+    {
+        System.out.println("===== TEST mySimpleLinkedList ======");
         //вставка
         mySLL.insertFirst(1);
         mySLL.insertFirst(2);
@@ -32,12 +54,12 @@ public class myTest {
         //удаление конкретного элемента
         System.out.println("Removing 3: ");
         mySLL.display();
+    }
 
-
+    public static void testLinkedListStack(myLinkedListStack<Integer> myLLS)
+    {
         System.out.println();
-        System.out.println("===== TEST mySimpleLinkedList ======");
-        myLinkedListStack<Integer> myLLS = new myLinkedListStack<>();
-
+        System.out.println("===== TEST myLinkedListStack ======");
         myLLS.push(1);
         myLLS.push(2);
         myLLS.push(3);
@@ -45,10 +67,13 @@ public class myTest {
         myLLS.push(5);
 
         myLLS.show();
+    }
 
+    public static void testTwoSidedLinkedList(myTwoSidedLinkedList<Integer> myTSLL)
+    {
         System.out.println();
         System.out.println("===== TEST myTwoSidedLinkedList ======");
-        myTwoSidedLinkedList<Integer> myTSLL = new myTwoSidedLinkedList<>();
+
         //вставка
         myTSLL.insertFirst(1);
         myTSLL.insertFirst(2);
@@ -63,9 +88,14 @@ public class myTest {
         System.out.println("Removing first: "+myTSLL.removeFirst());
         myTSLL.display();
 
+    }
+
+    public static void testLinkedQueue(myLinkedQueue<Integer> myLQ)
+    {
+
         System.out.println();
         System.out.println("===== TEST myLinkedQueue ======");
-        myLinkedQueue<Integer> myLQ = new myLinkedQueue<>();
+
         myLQ.insert(1);
         myLQ.insert(2);
         myLQ.insert(3);
@@ -73,11 +103,13 @@ public class myTest {
         myLQ.insert(5);
 
         System.out.println(myLQ.toString());
+    }
 
-        //ДОМАШНЕЕ ЗАДАНИЕ
+    public static void testLinkedDeque(myLinkedDeque<Integer> myLDq)
+    {
         System.out.println();
         System.out.println("===== TEST myLinkedDeque ======");
-        myLinkedDeque<Integer> myLDq = new myLinkedDeque<>();
+
         myLDq.pushFront(1);
         myLDq.pushFront(2);
         myLDq.pushFront(3);
@@ -94,29 +126,38 @@ public class myTest {
         System.out.println("Removing last item: "+myLDq.removeLast());
 
         System.out.println(myLDq.toString());
+    }
 
+    public static void testIterator(mySimpleLinkedList<Integer> mySLL)
+    {
+        myListIterator<Integer> myIterator = new myListIterator<>(mySLL);
         System.out.println();
         System.out.println("===== TEST myIterator ======");
-        myListIterator<Integer> myIterator = new myListIterator<>(mySLL);
         mySLL.display();
         System.out.println("Insert 4 after current:");
         myIterator.insertAfter(4);
         mySLL.display();
-        myIterator.next();
-        myIterator.next();
-        myIterator.next();
-        //System.out.println("Current position of iterator is: "+myIterator.getCurrent());
+        System.out.println("Shift 1 point forward:");
+        myIterator.nextLink();
+        System.out.println(myIterator.showPosition());
+        System.out.println("Delete current: ");
+        myIterator.deleteCurrent();
+        mySLL.display();
+        System.out.println("Shift 1 point forward:");
+        myIterator.nextLink();
+    //    myIterator.nextLink();
         System.out.println(myIterator.showPosition());
         System.out.println("Insert 5 before current:");
         myIterator.insertBefore(5);
         mySLL.display();
+        System.out.println("Reset iterator:");
+        myIterator.reset();
         System.out.println(myIterator.showPosition());
-        myIterator.next();
-        System.out.println("Удаляем текущий: ");
-        myIterator.deleteCurrent();
-        mySLL.display();
 
-
-
+        System.out.println("For-each:");
+        for (Integer value:
+             mySLL) {
+            System.out.println(value);
+        }
     }
 }

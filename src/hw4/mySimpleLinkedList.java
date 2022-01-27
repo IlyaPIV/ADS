@@ -1,6 +1,8 @@
 package hw4;
 
-public class mySimpleLinkedList<E> implements myLinkedListInterface<E> {
+
+
+public class mySimpleLinkedList<E> implements myLinkedListInterface<E>, Iterable<E> {
 
     protected int size;
     protected Node<E> first;
@@ -108,8 +110,9 @@ public class mySimpleLinkedList<E> implements myLinkedListInterface<E> {
         return first;
     }
 
-    public myListIterator<E> getIterator(){
-        return new myListIterator(this);
+
+    public myListIterator<E> iterator() {
+        return new myListIterator<>(this);
     }
 
 

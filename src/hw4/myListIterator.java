@@ -1,10 +1,14 @@
 package hw4;
 
-public class myListIterator<E> {
+import java.util.Iterator;
+
+public class myListIterator<E> implements Iterator<E>{
 
         private Node<E> current;
         private Node<E> previous;
         private final mySimpleLinkedList<E> list;
+        private int index = 0;
+
 
         public myListIterator(mySimpleLinkedList<E> list){
 
@@ -17,7 +21,7 @@ public class myListIterator<E> {
             previous = null;
         }
 
-        public boolean atEnd() { return this.current==null; }
+        public boolean atEnd() { return this.current.next==null; }
 
         public void nextLink(){
             previous = current;
@@ -42,6 +46,8 @@ public class myListIterator<E> {
                 current.next = newLink;
                 nextLink();
             }
+            list.size++;
+
         }
 
         public void insertBefore(E value){
@@ -54,6 +60,8 @@ public class myListIterator<E> {
                 current.previous = newLink;
                 current = newLink;
             }
+            list.size++;
+
         }
 
         public E deleteCurrent(){
@@ -67,30 +75,47 @@ public class myListIterator<E> {
                 if (atEnd()){
                     reset();
                 } else {
+
                     current.next.previous = previous;
                     current = current.next;
                 }
             }
+            list.size--;
 
             return value;
         }
 
         public boolean hasNext() {
-            return current.next!=null;
+            return index< list.size;
         }
 
 
-        public Node<E> next() {
-            return current.next;
+        public E next() {
+            previous = current;
+            current = current.next;
+            index++;
+            return previous.item;
         }
 
         public String showPosition(){
-            return "Current position = "+current.toString()+"; previous is = "+previous.toString()
-                    +"; next is = "+current.next.toString();
+            if (current==null) return "List is empty. Null-point.";
+            else
+            {
+                String pr = "";
+                if (previous == null) pr = " null ";
+                else pr = previous.toString();
+                String cr = "";
+                if (current.next == null) cr = " null ";
+                else cr = current.next.toString();
+                return "Current position = " + current.toString() + "; previous is = " + pr + "; next is = " + cr;
+            }
         }
+
 
     @Override
     public String toString() {
         return current.toString();
     }
+
+
 }
