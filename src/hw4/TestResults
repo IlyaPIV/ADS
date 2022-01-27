@@ -1,0 +1,59 @@
+"C:\Program Files\Java\jdk-17.0.1\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3\lib\idea_rt.jar=52247:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3\bin" -Dfile.encoding=UTF-8 -classpath D:\Java\gb_ADS\out\production\ADS hw4.myTest
+===== TEST mySimpleLinkedList ======
+{ 1 -> 2 -> 3 -> 2 -> 1 }
+Searching for 3: true
+Searching for 5: false
+Searching for 2: true
+Taking first: 1
+Removing first: 1
+Taking first: 2
+{ 2 -> 3 -> 2 -> 1 }
+Removing 3:
+{ 2 -> 3 -> 2 -> 1 }
+
+===== TEST myLinkedListStack ======
+{ 5 -> 4 -> 3 -> 2 -> 1 }
+
+===== TEST myTwoSidedLinkedList ======
+{ 3 -> 2 -> 1 -> 2 -> 3 }
+Removing 1: true
+{ 3 -> 2 -> 2 -> 3 }
+Removing first: 3
+{ 2 -> 2 -> 3 }
+
+===== TEST myLinkedQueue ======
+myLinkedQueue { data={ 1 -> 2 -> 3 -> 4 -> 5 } }
+
+===== TEST myLinkedDeque ======
+myLinkedDeque data= { <- 3 <-> 2 <-> 1 <-> 4 <-> 5 -> }
+Deque from front:  <- 3 <-> 2 <-> 1 <-> 4 <-> 5 ->
+Deque from back:  <- 5 <-> 4 <-> 1 <-> 2 <-> 3 ->
+Last item is: 5
+First item is: 3
+Removing first item: 3
+Removing first item: 2
+Removing last item: 5
+myLinkedDeque data= { <- 1 <-> 4 -> }
+
+===== TEST myIterator ======
+{ 2 -> 3 -> 2 -> 1 }
+Insert 4 after current:
+{ 2 -> 4 -> 3 -> 2 -> 1 }
+Shift 1 point forward:
+Current position = 3; previous is = 4; next is = 2
+Delete current:
+{ 2 -> 4 -> 2 -> 1 }
+Shift 1 point forward:
+Current position = 1; previous is = 2; next is =  null
+Insert 5 before current:
+{ 2 -> 4 -> 2 -> 5 -> 1 }
+Reset iterator:
+Current position = 2; previous is =  null ; next is = 4
+For-each:
+2
+4
+2
+5
+1
+
+Process finished with exit code 0
