@@ -54,8 +54,8 @@ public class Tests {
         List<Item> list = new ArrayList<>();
         Random rnd = new Random();
         for (int i = 0; i < count; i++) {
-            double rndWeight = 0.1 + 0.1*rnd.nextInt(55);
-            double cost = 1.0 + 0.1 * rnd.nextInt(2500);
+            double rndWeight = 0.10 + 0.10 * rnd.nextInt(55);
+            double cost = 1.00 + 0.10 * rnd.nextInt(2500);
             Item newItem = new Item("New_item_"+Item.itemsCount, cost, rndWeight);
             list.add(newItem);
         }

@@ -50,6 +50,6 @@ Items inside:
 >> Item{description='New_item_2', cost=181.10, weight=0.1}
 >> Item{description='New_item_4', cost=236.0, weight=1.20}
 Total count: 4
-Total weight: 7.50
+Total weight: 4.30
 
 Process finished with exit code 0

@@ -56,7 +56,7 @@ public class Bag {
         } else {
             System.out.println("Checking best combination:");
             this.itemsList = checkCombination(list, listWeight, summCost(list),0, list, "1");
-            this.current_weight = checkWeight(list);
+            this.current_weight = checkWeight(itemsList);
         }
     }
 
