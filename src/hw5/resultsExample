@@ -1,0 +1,55 @@
+"C:\Program Files\Java\jdk-17.0.1\bin\java.exe" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3\lib\idea_rt.jar=55825:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.2.3\bin" -Dfile.encoding=UTF-8 -classpath D:\Java\gb_ADS\out\production\ADS hw5.Tests
+==== TESTING POW NUMBERS====
+Число 2 в степени 3 равно = 8,0000
+Число 2 в степени 5 равно = 32,0000
+Число 2 в степени -3 равно = 0,1250
+Число 2 в степени 0 равно = 1,0000
+Число 2 в степени 1 равно = 2,0000
+Число 5 в степени 4 равно = 625,0000
+Число 10 в степени -2 равно = 0,0100
+
+====== TESTING ITEMS TO BAG =======
+[Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_2', cost=181.10, weight=0.1}, Item{description='New_item_3', cost=89.60, weight=3.2}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+Checking best combination:
+1.1: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_2', cost=181.10, weight=0.1}, Item{description='New_item_3', cost=89.60, weight=3.2}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+1.1.1: Checking combination: [Item{description='New_item_2', cost=181.10, weight=0.1}, Item{description='New_item_3', cost=89.60, weight=3.2}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+>>>This combo is current best.
+1.1.2: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_3', cost=89.60, weight=3.2}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+1.1.2.1: Checking combination: [Item{description='New_item_3', cost=89.60, weight=3.2}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+1.1.2.2: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+1.1.2.3: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.1.3: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_2', cost=181.10, weight=0.1}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+>>>This combo is current best.
+1.1.4: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_2', cost=181.10, weight=0.1}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.2: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_2', cost=181.10, weight=0.1}, Item{description='New_item_3', cost=89.60, weight=3.2}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+>>>This combo is current best.
+1.3: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_3', cost=89.60, weight=3.2}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+1.3.1: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_3', cost=89.60, weight=3.2}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+1.3.1.1: Checking combination: [Item{description='New_item_3', cost=89.60, weight=3.2}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+1.3.1.2: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+1.3.1.3: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.3.2: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_3', cost=89.60, weight=3.2}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+1.3.3: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+1.3.4: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.3.4.1: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.3.4.2: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.3.4.3: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_1', cost=141.0, weight=2.30}]
+1.4: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_2', cost=181.10, weight=0.1}, Item{description='New_item_4', cost=236.0, weight=1.20}]
+>>>This combo is current best.
+1.5: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_2', cost=181.10, weight=0.1}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.5.1: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_2', cost=181.10, weight=0.1}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.5.2: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_2', cost=181.10, weight=0.1}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.5.3: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.5.3.1: Checking combination: [Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.5.3.2: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_3', cost=89.60, weight=3.2}]
+1.5.3.3: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_1', cost=141.0, weight=2.30}]
+1.5.4: Checking combination: [Item{description='New_item_0', cost=245.60, weight=0.70}, Item{description='New_item_1', cost=141.0, weight=2.30}, Item{description='New_item_2', cost=181.10, weight=0.1}]
+Items inside:
+>> Item{description='New_item_0', cost=245.60, weight=0.70}
+>> Item{description='New_item_1', cost=141.0, weight=2.30}
+>> Item{description='New_item_2', cost=181.10, weight=0.1}
+>> Item{description='New_item_4', cost=236.0, weight=1.20}
+Total count: 4
+Total weight: 7.50
+
+Process finished with exit code 0
