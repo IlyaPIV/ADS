@@ -244,4 +244,23 @@ public class TreeImpl<E extends Comparable<? super E>> implements Tree<E> {
         }
         System.out.println("................................................................");
     }
+
+    public boolean checkBalance(){
+        return  isBalanced(root);
+    }
+
+    private boolean isBalanced(Node node){
+        return (node == null) ||
+                isBalanced(node.getLeftChild()) &&
+                        isBalanced(node.getRightChild()) &&
+                            Math.abs(depth(node.getLeftChild())- depth(node.getRightChild())) <= 1;
+    }
+
+    public int treesDepth(){
+        return depth(root);
+    }
+
+    private int depth(Node node){
+        return node == null ? 0 : 1 + Math.max(depth(node.getLeftChild()), depth(node.getRightChild()));
+    }
 }
