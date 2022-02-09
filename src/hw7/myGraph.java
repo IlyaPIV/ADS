@@ -215,27 +215,26 @@ public class myGraph implements Graph {
     }
 
     private void updateShortestRoutes(int currentVertex, int startToCurrent) {
-        int vertexIndex = 0; // стартовая вершина пропускается
-        while (vertexIndex < vertexList.size()) { // перебор столбцов
+        int vertexIndex = 0;
+        while (vertexIndex < vertexList.size()) {
 
-            if (vertexList.get(vertexIndex).isVisited()) { // если вершина column уже включена в дерево, она пропускается
+            if (vertexList.get(vertexIndex).isVisited()) {
                 vertexIndex++;
                 continue;
             }
-            // вычисление расстояния для одного элемента sPath
-            // получение ребра от currentVert к column
+
             int currentToFringe = adjMatrix[currentVertex][vertexIndex];
             // суммирование всех расстояний
             int startToFringe = startToCurrent + currentToFringe;
-            // определение расстояния текущего элемента vertexIndex
+
             int shortPathDistance = shortestRoutes.get(vertexIndex).getDistance();
 
-            // сравнение расстояния через currentVertex с текущим расстоянием в вершине с индексом vertexIndex
-            if (startToFringe < shortPathDistance || shortPathDistance==0) {// если меньше, то у вершины под индексом vertexIndex будет задан новый кратчайший путь
-                List<Integer> newParents = new ArrayList<>(shortestRoutes.get(currentVertex).getParentVertices());//создаём копию списка родителей вершины currentVert
-                newParents.add(currentVertex);// задаём в него и currentVertex как предыдущий
-                shortestRoutes.get(vertexIndex).setParentVertices(newParents); // соохраняем новый маршут
-                shortestRoutes.get(vertexIndex).setDistance(startToFringe); // соохраняем новую дистанцию
+
+            if (startToFringe < shortPathDistance || shortPathDistance==0) {
+                List<Integer> newParents = new ArrayList<>(shortestRoutes.get(currentVertex).getParentVertices());
+                newParents.add(currentVertex);
+                shortestRoutes.get(vertexIndex).setParentVertices(newParents);
+                shortestRoutes.get(vertexIndex).setDistance(startToFringe);
             }
             vertexIndex++;
         }
